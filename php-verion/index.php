@@ -1,14 +1,14 @@
 <?php
-
+//Edit Your Domain
 $sitedomain = "www.chokunplayz.dev";
 
-//behind cf true or false
-$behindcf = true;
+// DONT TOUCH THE CODE BELOW THIS LINE
+// -----------------------------------------------------------------
 
-if ($behindcf = "true" | $behindcf = "TRUE") {
+if (isset($_SERVER["HTTP_CF_CONNECTING_IP"])) {
   $ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
 } else {
-  $ip = $_SERVER["HTTP_CLIENT_IP"];
+  $ip = $_SERVER['REMOTE_ADDR'];
 }
 
 function getRandomString() {
